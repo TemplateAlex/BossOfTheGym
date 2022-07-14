@@ -1,0 +1,158 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+
+/*Create default styles for our site*/
+* {
+    font-family: 'Permanent Marker', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.main-site__wrapper {
+    min-height: 100vh;
+}
+
+.header {
+    height: 75px;
+}
+
+.footer, .icon-container__wrapper {
+    height: 100px;
+}
+
+.footer, .header {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    background-color: rgb(255, 255, 255);
+    animation: 5s pulsatingEffect cubic-bezier(.5,-0.01,1,.78) infinite;
+}
+
+.main {
+    flex: 1 1 auto;
+    padding: 10px 5px 5px 5px;
+}
+
+/*Main colors for underlined on our site*/
+
+.bulgarianRose {
+    background-color: rgb(72, 6, 7);
+    box-shadow: 0 0 1.5px rgb(72, 6, 7); 
+}
+
+/*Create style for dropdown menu*/
+.menu-dropdown {
+    position:relative;
+    display: inline-block;
+}
+
+.menu-dropdown__content {
+    position: absolute;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgb(247, 192, 0);
+    background-color: #FFF;
+    z-index: 1;
+}
+
+.menu-dropdown:hover .menu-dropdown__content {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Create styles for icons*/
+
+.icon-list {
+    list-style-type: none;
+}
+
+.icon-container {
+    transform: translateY(15%);
+}
+
+.icon-elem__wrapper {
+    width: 46px;
+    height: 46px;
+    border-radius: 25px;
+    border: 5px solid #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.img-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.icon-elem__wrapper:hover .img-icon {
+    animation: rotateIcon 1s;
+}
+
+.icon-instagram {
+    background: url("../images/icons/icon_instagram.png") 50% 50% / cover no-repeat;
+}
+
+.icon-facebook {
+    background: url("../images/icons/icon_facebook.png") 50% 50% / cover no-repeat;
+}
+
+.icon-twitter {
+    background: url("../images/icons/icon_twitter.png") 50% 50% / cover no-repeat;
+}
+
+.icon-instagram__wrapper:hover {
+    border-color: rgb(255, 118, 0);
+    box-shadow: 0 0 3px rgb(255, 118, 0);
+}
+
+.icon-twitter__wrapper:hover {
+    border-color: rgb(3, 169, 244);
+    box-shadow: 0 0 3px rgb(3, 169, 244);
+}
+
+.icon-facebook__wrapper:hover {
+    border-color: rgb(63, 81, 181);
+    box-shadow: 0 0 3px rgb(63, 81, 181);
+}
+
+/*Create styles for header elements*/
+.main-icon {
+    height: 50px;
+    width: 60px;
+    background: url("../images/icons/main_icon.png") 50% 50% / cover no-repeat;
+}
+
+/*Create style for progress bar*/
+
+.progressBar {
+    width: 0%;
+    height: 2.5px;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/*Animation for header and footer*/
+@keyframes pulsatingEffect {
+    from {box-shadow: 0 0 5px rgba(0, 0, 0, 1);}
+    50% {box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);}
+    to {box-shadow: 0 0 5px rgba(0, 0, 0, 1);}
+}
+
+@keyframes rotateIcon {
+    from {transform: rotateZ(0deg) rotateY(0deg);}
+    50% {transform: rotateZ(25deg) rotateY(25deg);}
+    to {transform: rotateZ(5deg) rotateY(2deg);}
+}

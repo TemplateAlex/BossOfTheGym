@@ -1,0 +1,50 @@
+﻿@page
+@model BossOfTheGym.Pages.RegistrationPageModel
+@{
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/StyleForLogRegPage.css" type="text/css" />
+}
+
+@section Scripts {
+    <script src="~/js/ScriptForParallax.js"></script>
+}
+
+<div class="background"></div>
+
+<div class="form-card">
+    <div class="form-card__wrapper container pt-5 pb-5 ps-1 pe-1">
+        <div class="card-header__wrapper container-fluid d-flex justify-content-center">
+            <h1>Welcome to our GYM</h1>
+        </div>
+        <hr />
+        <div class="card-body__wrapper container-fluid">
+            <form method="post">
+                <div class="card-body__input">
+                    <div class="form-group">
+                        <label for="emailId">Write your email:</label>
+                        <input class="form-control" type="email" name="email" id="emailId" aria-describedby="emailHelpId" />
+                        <small id="emailHelpId" class="form-text text-muted">Write email with your domain.</small>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for=nicknameId>Write your nickname:</label>
+                        <input class="form-control" type="text" name="nickname" id="nicknameId"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="psswdId">Write your password:</label>
+                        <input class="form-control" type="password" name="psswd" id="psswdId" />
+                    </div>
+                    <div class="form-group">
+                        <label for="rpsswdId">Re-write your password:</label>
+                        <input class="form-control" type="password" name="rpsswd" id="rpsswdId" />
+                    </div>
+                </div>
+                <hr />
+                <div class="container-fluid d-flex justify-content-end">
+                    <button type="submit" class="btn btn-outline-dark">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
