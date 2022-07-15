@@ -30,18 +30,6 @@
     animation: 1s ShowUpForm linear;
 }
 
-/*h1 {
-    font-family: 'Splash', cursive;
-}*/
-
-/*Create styles for text and links*/
-/*h1 {
-    font-family: 'Alfa Slab One', cursive;
-}*/
-
-.card-header__wrapper h1 {
-    font-family: 'Piedra', cursive;
-}
 
 .reg-link {
     color: rgb(92, 98, 103);

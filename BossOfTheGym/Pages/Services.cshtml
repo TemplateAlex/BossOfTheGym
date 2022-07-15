@@ -5,10 +5,12 @@
 
 @section Scripts {
     <script src="~/js/UnderlineTextScript.js"></script>
+    <script src="~/js/CarouselScript.js"></script>
 }
 
 @section Styles {
     <link rel="stylesheet" type="text/css" href="~/css/StyleServices.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/CarouselStyle.css" />
 }
 
 <div class="container-fluid d-flex justify-content-center">
@@ -18,8 +20,40 @@
     </div>
 </div>
 <hr />
-<div class=""></div>
-
-@Model.Category
+<div class="row">
+    <div class="col-6 d-flex justify-content-center mt-2">
+        <div class="slider-container__wrapper">
+            <div class="slider-container">
+                <div class="slider-element__wrapper">
+                    <div class="slider-element first-element active-element"></div>
+                </div>
+                <div class="slider-element__wrapper">
+                    <div class="slider-element second-element"></div>
+                </div>
+                <div class="slider-element__wrapper">
+                    <div class="slider-element third-element"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="underline-text__wrapper">
+                <h3 class="unline-text text-arabic">Our gym</h3>
+                <div class="unline darkGoldenrod"></div>
+            </div>
+        </div>
+        <div class="container-fluid mt-2">
+            <p>Boss Of The GYM is one of the most popular DUNGEON gyms in your DEEP DARK FANTASY.
+                This gym has its own VAN and BILLY, but you will find in Boss Of The Gym something that you could not find for a long time. 
+                We promise that you will get an interesting experience and sensations.
+                The atmosphere motivates to become a PERFOMANCE ARTIST.
+                The best DUNGEON MASTERS will work with you.
+                DO YOU LIKE WHAT YOU SEE?
+                Join us, we are waiting for you!!!
+            </p>
+        </div>
+    </div>
+</div>
 
 

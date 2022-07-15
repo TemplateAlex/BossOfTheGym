@@ -48,6 +48,25 @@ body {
     box-shadow: 0 0 1.5px rgb(72, 6, 7); 
 }
 
+.darkGoldenrod {
+    background-color: rgb(255, 185, 15);
+    box-shadow: 0 0 0.5px rgb(255, 185, 15);
+}
+
+/*Create styles for fonts*/
+
+.text-arabic {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.text-splash {
+    font-family: 'Splash', cursive;
+}
+
+.text-piedra {
+    font-family: 'Piedra', cursive;
+}
+
 /*Create style for dropdown menu*/
 .menu-dropdown {
     position:relative;

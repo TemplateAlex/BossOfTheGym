@@ -1,0 +1,40 @@
+﻿.slider-container__wrapper {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.slider-container {
+    position: relative;
+    box-shadow: 0 0 15px rgb(255, 215, 0);
+}
+
+.slider-container, .slider-element {
+    height: 250px;
+    border-radius: 15%;
+    width: 250px;
+}
+
+.slider-element__wrapper {
+    position: absolute;
+}
+
+.slider-element {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.active-element {
+    opacity: 1;
+}
+
+.first-element {
+    background: url("../images/backgrounds/first_background_gym.jpg") 50% 50% / cover no-repeat;
+}
+
+.second-element {
+    background: url("../images/backgrounds/second_background_gym.jpg") 50% 50% / cover no-repeat; 
+}
+
+.third-element {
+    background: url(../images/backgrounds/third_background_gym.jpg) 50% 50% / cover no-repeat;
+}
