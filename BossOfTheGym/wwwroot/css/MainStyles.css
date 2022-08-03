@@ -45,12 +45,17 @@ body {
 
 .bulgarianRose {
     background-color: rgb(72, 6, 7);
-    box-shadow: 0 0 1.5px rgb(72, 6, 7); 
+    box-shadow: 0 0 2px rgba(72, 6, 7, 0.5); 
 }
 
 .darkGoldenrod {
     background-color: rgb(255, 185, 15);
-    box-shadow: 0 0 0.5px rgb(255, 185, 15);
+    box-shadow: 0 0 2px rgba(255, 185, 15, 0.5);
+}
+
+.azure {
+    background-color: rgb(240, 255, 255);
+    box-shadow: 0 0 2px rgba(240, 255, 255, 0.5);
 }
 
 /*Create styles for fonts*/

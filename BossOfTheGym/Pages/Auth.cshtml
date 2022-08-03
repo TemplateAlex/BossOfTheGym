@@ -1,0 +1,80 @@
+﻿@page
+@model BossOfTheGym.Pages.AuthModel
+@{
+}
+
+@section Styles {
+    <link rel="stylesheet" type="text/css" href="~/css/StyleForLogRegPage.css" />
+}
+
+@section Scripts {
+    <script src="~/js/ScriptForCheckbox.js"></script>
+}
+
+<div class="reglog-wrapper d-flex justify-content-center container-fluid flex-column">
+    <div class="reglog">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="header-wrapper d-flex">
+                <h6 class="text-arabic">Log in</h6>
+                <h6 class="text-arabic ms-4">Register</h6>
+            </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-center">
+            <label>
+                <input class="checkbox" type="checkbox" />
+                <span class="check"></span>
+            </label>
+        </div>
+        <div class="form-card__wrapper mt-3 d-flex justify-content-center flex-column">
+            <div class="form-card reg-card ps-2 pe-2 pt-3 pb-3 d-flex justify-content-center align-items-center">
+                <form method="post">
+                    <div class="card-header__wrapper container d-flex justify-content-center">
+                        <h3>Register</h3>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                        <label for="emailRegId">Write your email:</label>
+                        <input class="form-control" id="emailRegId" type="email" name="emailReg" aria-describedby="emailHelpId"/>
+                        <small id="emailHelpId"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="nicknameRegId">Your nickname:</label>
+                        <input class="form-control" id="nicknameRegId" type="text" name="nicknameReg"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="psswdRegId">Your password:</label>
+                        <input class="form-control" id="psswdRegId" type="password" name="psswdReg" />
+                    </div>
+                    <div class="form-group">
+                        <label for=" rpsswdRegId">Repeat your password:</label>
+                        <input class="form-control" id="rppswdRegId" type="password" name="rpsswdReg" />
+                    </div>
+                    <hr />
+                    <div class="btn-wrapper container-fluid d-flex justify-content-end">
+                        <button type="submit" class="btn btn-outline-dark" asp-page-handler="Reg">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div class="form-card log-card ps-2 pe-2 pt-3 pb-3 d-flex justify-content-center align-items-center">
+                <form method="post">
+                    <div class="card-header__wrapper container d-flex justify-content-center">
+                        <h3>Log in</h3>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                        <label for="nicknameLogId">Your nickname:</label>
+                        <input class="form-control" id="nicknameLogId" type="text" name="nicknameLog" />
+                    </div>
+                    <div class="form-group">
+                        <label for="psswdLogId">Your password: </label>
+                        <input class="form-control" id="psswdLogId" type="password" name="psswdLog" />
+                    </div>
+                    <hr />
+                    <div class="btn-wrapper container-fluid d-flex justify-content-end">
+                        <button type="submit" class="btn btn-outline-dark" asp-page-handler="Log">Log in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

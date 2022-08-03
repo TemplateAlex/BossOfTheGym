@@ -1,51 +1,137 @@
-﻿/*Create style for parallax*/
-.main {
-    padding: 0;
+﻿.reglog-wrapper {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
 }
-.body-site__wrapper {
+
+.reglog {
+    transform: translateY(-250px);
+}
+
+.form-card__wrapper {
     position: relative;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.background {
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    overflow: hidden;
-    top: -10%;
-    left: -10%;
-    z-index: -1;
-    opacity: 0.5;
-    background: url("../images/backgrounds/backgroundRegLogPage.jpg") center center / cover no-repeat;
-}
-
-/*Create style for form card*/
 .form-card {
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 25px;
-    animation: 1s ShowUpForm linear;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 20px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    backface-visibility: hidden;
+    transition: transform 1s;
 }
 
-
-.reg-link {
-    color: rgb(92, 98, 103);
-}
-.reg-link:hover {
-    color: rgb(69, 75,80);
+.reg-card {
+    transform: translateX(-50%) rotateY(180deg);
 }
 
-@keyframes ShowUpForm {
+/*Stilization for main checkbox and background*/
+.checkbox {
+    appearance: none;
+    display: none;
+    visibility: hidden;
+}
+
+.check {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/*Stilization for switch in checkbox*/
+.check::before, .check::after{
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 2px;
+    border-radius: 50%;
+    background-color: #FFF;
+    transition: 0.5s;
+}
+
+.check::before {
+    left: 2px;
+}
+
+.check::after {
+    right: 2px;
+    transform: translateX(50px);
+}
+
+.checkbox:checked ~ .check::before {
+    transform: translateX(-50px);
+    animation: animationLeftShadows 1s;
+}
+
+.checkbox:checked ~ .check::after {
+    transform: translateX(0px);
+    animation: animationRightShows 1s;
+}
+
+.checkbox ~ .check::before {
+    transform: translateX(0px);
+    animation: animationLeftShows 1s;
+}
+
+.checkbox ~ .check::after {
+    transform: translateX(50px);
+    animation: animationRightShadows 1s;
+}
+
+/*Animations for checkbox*/
+@keyframes animationLeftShadows {
     from {
-        transform: translateY(-50%) rotateX(-45deg);
-        opacity:0;
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(15px);
     }
     to {
-        transform: translateY(0%) rotateX(0deg);
-        opacity: 1;
+        transform: translateX(-50px);
     }
 }
 
+@keyframes animationRightShows {
+    from{
+        transform: translateX(50px);
+    }
+    50% {
+        transform: translateX(25px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animationLeftShows {
+    from {
+        transform: translateX(-50px);
+    }
+    50% {
+        transform: translateX(-25px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animationRightShadows {
+    from {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-15px);
+    }
+    to {
+        transform: translateX(50px);
+    }
+}
