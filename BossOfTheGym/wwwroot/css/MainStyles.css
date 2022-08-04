@@ -58,7 +58,11 @@ body {
     box-shadow: 0 0 2px rgba(240, 255, 255, 0.5);
 }
 
-/*Create styles for fonts*/
+/*Create styles for fonts and their colors*/
+
+.coltext-burgundy {
+    color: rgb(128,0, 32); 
+}
 
 .text-arabic {
     font-family: 'Alfa Slab One', cursive;

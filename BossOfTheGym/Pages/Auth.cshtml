@@ -8,7 +8,11 @@
 }
 
 @section Scripts {
-    <script src="~/js/ScriptForCheckbox.js"></script>
+    <script src="~/js/ScriptForAuthPage.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
 }
 
 <div class="reglog-wrapper d-flex justify-content-center container-fluid flex-column">
@@ -34,20 +38,22 @@
                     <hr />
                     <div class="form-group">
                         <label for="emailRegId">Write your email:</label>
-                        <input class="form-control" id="emailRegId" type="email" name="emailReg" aria-describedby="emailHelpId"/>
-                        <small id="emailHelpId"></small>
+                        <input class="form-control email-form__reg" id="emailRegId" type="email" name="emailReg" aria-describedby="emailHelpId"/>
+                        <small class=" text-piedra coltext-burgundy msg-error msg-error__email" id="emailHelpId"></small>
                     </div>
                     <div class="form-group">
                         <label for="nicknameRegId">Your nickname:</label>
-                        <input class="form-control" id="nicknameRegId" type="text" name="nicknameReg"/>
+                        <input class="form-control nickname-form__reg" id="nicknameRegId" type="text" name="nicknameReg" aria-describedby="nicknameHelpId"/>
+                        <small class="text-piedra coltext-burgundy msg-error msg-error__nicknameReg" id="nicknameHelpId"></small>
                     </div>
                     <div class="form-group">
                         <label for="psswdRegId">Your password:</label>
-                        <input class="form-control" id="psswdRegId" type="password" name="psswdReg" />
+                        <input class="form-control psswd-form__reg" id="psswdRegId" type="password" name="psswdReg" />
                     </div>
                     <div class="form-group">
-                        <label for=" rpsswdRegId">Repeat your password:</label>
-                        <input class="form-control" id="rppswdRegId" type="password" name="rpsswdReg" />
+                        <label for="rpsswdRegId">Repeat your password:</label>
+                        <input class="form-control rpsswd-form__reg" id="rppswdRegId" type="password" name="rpsswdReg" aria-describedby="psswdHelpId" />
+                        <small class="text-piedra coltext-burgundy msg-error msg-error__psswdReg" id="psswdHelpId"></small>
                     </div>
                     <hr />
                     <div class="btn-wrapper container-fluid d-flex justify-content-end">
@@ -63,11 +69,13 @@
                     <hr />
                     <div class="form-group">
                         <label for="nicknameLogId">Your nickname:</label>
-                        <input class="form-control" id="nicknameLogId" type="text" name="nicknameLog" />
+                        <input class="form-control nickname-form__log" id="nicknameLogId" type="text" name="nicknameLog" aria-describedby="nicknameLogHelpId" />
+                        <small class="text-piedra coltext-burgundy msg-error msg-error__nicknameLog">Something</small>
                     </div>
                     <div class="form-group">
                         <label for="psswdLogId">Your password: </label>
-                        <input class="form-control" id="psswdLogId" type="password" name="psswdLog" />
+                        <input class="form-control" id="psswdLogId" type="password" name="psswdLog" aria-describedby="psswdLogHelpId" />
+                        <small class="text-piedra coltext-burgundy msg-error msg-error__psswdLog" id="psswdLogHelpId"></small>
                     </div>
                     <hr />
                     <div class="btn-wrapper container-fluid d-flex justify-content-end">
