@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using BossOfTheGym.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<BOTGDBContext>(ops => ops.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database=BossOfTheGym; Trusted_Connection=True;"));
 builder.Services.AddSession();
 
 var app = builder.Build();
