@@ -1,4 +1,5 @@
-﻿.slider-container__wrapper {
+﻿/*Create main slider*/
+.slider-container__wrapper {
     perspective: 1000px;
     transform-style: preserve-3d;
 }
@@ -18,6 +19,8 @@
     position: absolute;
 }
 
+
+/*Create pattern for animation slider*/
 .slider-element {
     opacity: 0;
     transition: opacity 1s;
@@ -27,6 +30,8 @@
     opacity: 1;
 }
 
+
+/*Add images for slider*/
 .first-element {
     background: url("../images/backgrounds/first_background_gym.jpg") 50% 50% / cover no-repeat;
 }

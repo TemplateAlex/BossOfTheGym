@@ -1,4 +1,5 @@
-﻿document.querySelectorAll(".underline-text__wrapper").forEach(elem => {
+﻿//Create underlined with div
+document.querySelectorAll(".underline-text__wrapper").forEach(elem => {
 
     elem.addEventListener("mouseover", function (event) {
         elem.querySelector(".unline").style.width = 100 + "%"; 

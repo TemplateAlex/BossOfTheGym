@@ -1,16 +1,39 @@
-﻿.unline {
+﻿/*Create underline*/
+.unline {
     width: 0%;
     height: 2.5px;
     transition: 1s;
 }
 
+/*Create cards for coachers*/
 .coachers__wrapper {
     overflow:hidden;
-    height: 100px;
+    position: relative;
 }
 
 .background {
     height: 110%;
     width: 110%;
+    position: absolute;
     background: url("../images/backgrounds/background_asphalt.jpg") 50% 50% / cover no-repeat;
+    z-index: -1;
+}
+
+.coacher-card__wrapper {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+    height: 250px;
+    background-color: #FFF;
+
+}
+
+.coacher-card__top {
+    position: absolute;
+
+}
+
+.coacher-card__back {
+    position:absolute;
 }
