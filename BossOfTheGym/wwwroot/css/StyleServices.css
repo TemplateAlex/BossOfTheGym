@@ -25,15 +25,28 @@
     margin-bottom: 20px;
     width: 50%;
     height: 250px;
-    background-color: #FFF;
+}
 
+.coacher-card__top, .coacher-card__back {
+    width: 100%;
+    height: 100%;
+    border-radius: 25%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.coacher-img {
+    height: 100%;
+    width: 100%;
 }
 
 .coacher-card__top {
-    position: absolute;
-
+    transform: rotateY(0deg);
 }
 
 .coacher-card__back {
-    position:absolute;
+    transform: rotateY(90deg);
 }
