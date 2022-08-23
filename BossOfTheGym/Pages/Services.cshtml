@@ -1,7 +1,10 @@
 ﻿@page "{category}"
 @model BossOfTheGym.Pages.ServicesModel
-@{
+@{ 
 }
+
+@using Microsoft.AspNetCore.Html;
+@using BossOfTheGym.HtmlHelpers;
 
 @section Scripts {
     <script src="~/js/UnderlineTextScript.js"></script>
@@ -69,26 +72,9 @@
         <div class="background bckg-coachers__wrapper container-fluid"></div>
         <div class="coachers-cards__wrapper">
             <div class="row">
-                <div class="col-4 d-flex justify-content-center">
-                    <div class="coacher-card__wrapper">
-                        <div class="coacher-card__top">
-                            <div class="coacher-img" style="background:url('') 50% 50%/ cover no-repeat"></div>
-                        </div>
-                        <div class="coacher-card__back d-flex flex-column justify-content-center align-items-center">
-                            <div class="underline-text__wrapper">
-                                <h5 class="unline-text">Something</h5>
-                                <div class="unline bulgarianRose"></div>
-                            </div>
-                            <p>Something</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    
-                </div>
-                <div class="col-4">
-                    
-                </div>
+                @Html.CreateFlipCard()
+                @Html.CreateFlipCard()
+                @Html.CreateFlipCard()
             </div>
         </div>
     </div>

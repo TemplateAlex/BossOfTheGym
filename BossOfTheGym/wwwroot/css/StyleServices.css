@@ -25,6 +25,8 @@
     margin-bottom: 20px;
     width: 50%;
     height: 250px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10%;
 }
 
 .coacher-card__top, .coacher-card__back {
@@ -44,9 +46,9 @@
 }
 
 .coacher-card__top {
-    transform: rotateY(0deg);
+    transform: rotateX(0deg) rotateY(0deg);
 }
 
 .coacher-card__back {
-    transform: rotateY(90deg);
+    transform: rotateX(90deg) rotateY(90deg);
 }
