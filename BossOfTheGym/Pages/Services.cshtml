@@ -1,6 +1,8 @@
 ﻿@page "{category}"
 @model BossOfTheGym.Pages.ServicesModel
-@{ 
+@{
+    int startIndex = 0;
+    int wall = 3;
 }
 
 @using Microsoft.AspNetCore.Html;
@@ -71,11 +73,31 @@
     <div class="coachers__wrapper container-fluid">
         <div class="background bckg-coachers__wrapper container-fluid"></div>
         <div class="coachers-cards__wrapper">
-            <div class="row">
-                @Html.CreateFlipCard()
-                @Html.CreateFlipCard()
-                @Html.CreateFlipCard()
-            </div>
+            @while(startIndex < Model.Coachers.Count)
+            {
+                <div class="row">
+                    @if (Model.Coachers.Count - wall < 0)
+                    {
+                        @for(int i = startIndex; i < Model.Coachers.Count; i++)
+                        {
+                            @Html.CreateFlipCard()
+                        }
+
+                    } else
+                    {
+                        @for(int i = startIndex; i < wall; i++)
+                        {
+                            @Html.CreateFlipCard()        
+                        }
+
+                    }
+
+                    @{
+                        startIndex = wall;
+                        wall += 3; 
+                    }
+                </div>    
+            }
         </div>
     </div>
 </div>
