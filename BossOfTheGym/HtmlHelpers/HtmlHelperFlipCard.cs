@@ -6,7 +6,7 @@ namespace BossOfTheGym.HtmlHelpers
 {
     public static class HtmlHelperFlipCard
     {
-        public static HtmlString CreateFlipCard(this IHtmlHelper html)
+        public static HtmlString CreateFlipCard(this IHtmlHelper html, string nameCoacher, string surnameCoacher)
         {
             StringBuilder result = new StringBuilder();
             result.Append("<div class='col-4 d-flex justify-content-center'>");
@@ -16,7 +16,7 @@ namespace BossOfTheGym.HtmlHelpers
             result.Append("</div>");
             result.Append("<div class='coacher-card__back d-flex flex-column justify-content-center align-items-center'>");
             result.Append("<div class='underline-text__wrapper'>");
-            result.Append("<h5 class='unline-text'>Something</h5><div class='unline bulgarianRose'></div>");
+            result.Append($"<h5 class='unline-text'>{nameCoacher} {surnameCoacher}</h5><div class='unline bulgarianRose'></div>");
             result.Append("</div><p>Something</p>");
             result.Append("</div></div></div>");
 

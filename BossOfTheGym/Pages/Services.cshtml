@@ -62,9 +62,6 @@
         </div>
     </div>
 </div>
-
-@Model.typeCoacher.Id
-
 <div class="coachers-part__wrapper container-fluid mt-5">
     <div class="container-fluid d-flex justify-content-start">
         <div class="underline-text__wrapper">
@@ -83,14 +80,14 @@
                     {
                         @for(int i = startIndex; i < Model.Coachers.Count; i++)
                         {
-                            @Html.CreateFlipCard()
+                            @Html.CreateFlipCard(Model.Coachers[i].Name, Model.Coachers[i].Surname)
                         }
 
                     } else
                     {
                         @for(int i = startIndex; i < wall; i++)
                         {
-                            @Html.CreateFlipCard()        
+                            @Html.CreateFlipCard(Model.Coachers[i].Name, Model.Coachers[i].Surname)        
                         }
 
                     }
@@ -101,6 +98,42 @@
                     }
                 </div>    
             }
+        </div>
+    </div>
+</div>
+<hr />
+<div class="signUp__wrapper">
+    <div class="row">
+        <div class="col-6">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="underline-text__wrapper">
+                    <h3 class="text-piedra">Let's see you in our gym! Boss Of The Gym</h3>
+                    <h3 class="text-piedra unline-text">Boss Of The Gym!</h3>
+                    <div class="unline bulgarianRose"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+                <div class="signUp-form__wrapper">
+                    <form method="post">
+                        <div class="container-fluid">
+                            <div class="form-group">
+                                <label for="nameId">Write your name</label>
+                                <input id="nameId" class="form-control name-form__input" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label for="telId">Write your phone number</label>
+                                <input id="telId" class="form-control tel-form__input" type="tel" name="telNumber" aria-describedby="telHelpId"/>
+                                <small id="telHelpId" class="text-piedra coltext-burgundy msg-error msg-error__tel"></small>
+                            </div>
+                        </div>
+                        <div class="container-fluid d-flex flex-column justify-content-end">
+                            <button type="submit" class="btn btn-outline-dark" asp-page-handler="SignUp">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

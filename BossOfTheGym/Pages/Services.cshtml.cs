@@ -8,9 +8,20 @@ namespace BossOfTheGym.Pages
     {
         private readonly BOTGDBContext _context;
 
-        public TypeCoacher? typeCoacher; 
+        public TypeCoacher? typeCoacher = null; 
         public List<Coacher> Coachers { get; private set; } = new List<Coacher>();
         public string? Category { get; private set; }
+
+        [BindProperty]
+        public string Name { get; set; }
+
+        [BindProperty]
+        public string TelNumber { get; set; }
+
+        public ServicesModel(BOTGDBContext db)
+        {
+            _context = db;
+        }
 
         public IActionResult OnGet(string category)
         {
@@ -38,7 +49,8 @@ namespace BossOfTheGym.Pages
                 this.typeCoacher = _context.TypeCoachers.FirstOrDefault(t => t.TypeCoacherName == "Online Training");
             }
 
-            var personsGym = _context.PersonsGym.ToList();
+            
+            var personsGym = _context.PersonGyms.ToList();
 
             for (int i = 0; i < personsGym.Count; i++)
             {
@@ -51,5 +63,9 @@ namespace BossOfTheGym.Pages
             return Page();
         }
 
+        public void OnPostSignUp()
+        {
+
+        }
     }
 }
