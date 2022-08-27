@@ -10,24 +10,15 @@ document.querySelectorAll(".coacher-card__wrapper").forEach(elem => {
     });
 });
 
-//Create checker for information;
-document.querySelector(".tel-form__input").addEventListener("input", function (event) {
-    var telNum = this.value;
-    var msgBox = document.querySelector(".msg-error__tel");
-    var checker = false;
+//Create checker for information
+var emailInput = document.querySelector(".email-form__input")
+var msgBox = document.querySelector(".msg-error__email");
 
-    for (var i = 0; i < telNum.length; i++) {
-        var codeASCII = telNum[i].charCodeAt(0);
+$(document).ready(function () {
+    setInterval(function () {
+        var textInput = emailInput.value;
 
-        if (codeASCII < 48 || codeASCII > 57) {
-            checker = true;
-        }
-
-        if (checker) {
-            msgBox.innerHTML = "Invalid telephone number";
-        }
-        else {
-            msgBox.innerHTML = "";
-        }
-    }
+        if (textInput.indexOf("@") == -1 && textInput.length > 0) msgBox.innerHTML = "Invalid email";
+        else msgBox.innerHTML = "";
+    }, 100);
 });

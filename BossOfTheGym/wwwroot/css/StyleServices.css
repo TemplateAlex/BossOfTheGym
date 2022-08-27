@@ -52,3 +52,12 @@
 .coacher-card__back {
     transform: rotateX(90deg) rotateY(90deg);
 }
+
+/*Create styles for sign up form*/
+.signUp-form__wrapper {
+    height: 300px;
+    width: 50%;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(255, 215, 0);
+}
